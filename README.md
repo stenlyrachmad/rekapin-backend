@@ -1,6 +1,6 @@
 # 🚀 Rekapin FastAPI
 
-Rekapin FastAPI is a backend service designed to handle **audio transcription and summarization** workflows.  
+Rekapin FastAPI is a backend service designed to handle ** AI summarization** workflows.  
 It integrates with **Supabase**, **Groq AI models**, and **Redis Queue (RQ)** for background processing.
 
 ---
