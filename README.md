@@ -7,19 +7,7 @@ It integrates with **Supabase**, **Groq AI models**, and **Redis Queue (RQ)** fo
 
 ## 📂 Project Structure
 
-rekapin-fastapi/
-├── app/
-│ ├── main.py # FastAPI entry point
-│ ├── routes/ # API routers
-│ ├── services/ # External service integrations (Supabase, Groq, Redis, etc.)
-│ ├── models/ # Pydantic schemas
-│ ├── auth/ # Auth utilities
-│ └── config/ # App configuration
-├── worker/
-│ └── summarize_worker.py # RQ worker for background summarization
-├── docker-compose.yml # Multi-service setup (FastAPI, Redis, Worker)
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+<pre> ```text rekapin-fastapi/ ├── app/ │ ├── main.py # FastAPI entry point │ ├── routes/ # API routers │ ├── services/ # External service integrations (Supabase, Groq, Redis, etc.) │ ├── models/ # Pydantic schemas │ ├── auth/ # Auth utilities │ └── config/ # App configuration ├── worker/ │ └── summarize_worker.py # RQ worker for background summarization ├── docker-compose.yml # Multi-service setup (FastAPI, Redis, Worker) ├── requirements.txt # Python dependencies └── README.md # Project documentation ``` </pre>
 
 
 ---
