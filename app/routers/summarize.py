@@ -1,4 +1,9 @@
+import os
+
+from dotenv import load_dotenv
 from fastapi import APIRouter, Header, HTTPException, status
+
+from app.config import settings
 from app.models import SummarizeRequest
 from app.auth import get_user_from_token
 from app.services.supabase_client import get_supabase
@@ -7,6 +12,7 @@ from app.services.queue import queue
 from worker.summarize_worker import summarize_task
 from rq.job import Job
 from app.services.queue import redis_conn
+
 
 router = APIRouter(prefix="")
 
@@ -58,7 +64,7 @@ async def summarize(payload: SummarizeRequest, authorization: str | None = Heade
         "user_id": user_id,
         "transcript_id": payload.transcript_id,
         "summary_text": summary_text,
-        "model": None
+        "model": settings.GROQ_MODEL
     }).execute()
     summary_id = None
     try:
