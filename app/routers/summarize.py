@@ -83,6 +83,7 @@ async def summarize(payload: SummarizeRequest, authorization: str | None = Heade
 
 @router.get("/job/{job_id}")
 async def get_job_status(job_id: str, authorization: str | None = Header(None)):
+    """To Get the Summary Result when the worker is done processing"""
     if not authorization:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing Authorization header")
 
